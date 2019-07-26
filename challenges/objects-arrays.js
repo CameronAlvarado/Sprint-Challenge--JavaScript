@@ -72,9 +72,18 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 let universities = [];
 
-// universities = graduates.map(function(name) {
-//   return name.university.sort(dynamicSort("univeristy"));
-// //   return element.university.
+universities = graduates.map(function(name) {
+  return name.university
+});
+
+console.log(universities.sort());
+
+// universities = graduates.map(function(attr) {
+//     graduates.sort(function(a, b){
+//     if(a.university < b.university) { return -1; }
+//     if(a.university > b.university) { return 1; }
+//     return 0;
+//   });
 // });
 
 
