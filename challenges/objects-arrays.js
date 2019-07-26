@@ -72,7 +72,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 let universities = [];
 
-universities = graduates.map(function(name) {
+universities = graduates.map( (name) => {
   return name.university
 });
 
@@ -97,7 +97,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 
-graduates.forEach(function(name, i, arr) {
+graduates.forEach( (name) => {
   contactInfo.push(`${name.first_name} ${name.email}`);
 });
 
@@ -107,7 +107,7 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 let uni = [];
 
-uni = graduates.filter(function(element) {
+uni = graduates.filter( (element) => {
   return element.university.includes("Uni");
 });
 
@@ -137,7 +137,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 let animalNames = [];
 
-zooAnimals.forEach(function(animal, i, arr) {
+zooAnimals.forEach( (animal) => {
   animalNames.push(`${animal.animal_name}, ${animal.scientific_name}`);
 });
 
@@ -151,7 +151,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 let lowerCase = [];
 
-lowerCase = zooAnimals.map(function(name) {
+lowerCase = zooAnimals.map( (name) => {
   return name.animal_name.toLowerCase()
 });
 
@@ -164,7 +164,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 let lowerPopulation = [];
 
-lowerPopulation = zooAnimals.filter(function(element) {
+lowerPopulation = zooAnimals.filter( (element) => {
   return element.population < 5
 });
 
@@ -177,7 +177,7 @@ The zoos need to know their total animal population across the United States.  F
 */
 let populationTotal = 0;
 
-populationTotal = zooAnimals.reduce(function(param1, param2) {
+populationTotal = zooAnimals.reduce( (param1, param2) => {
   return param1 += param2.population;
 }, 0);
 
@@ -189,4 +189,6 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
+// done
 
