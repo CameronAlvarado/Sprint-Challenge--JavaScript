@@ -73,12 +73,10 @@ Once you have the new array created, sort the universities alphabetically and lo
 let universities = [];
 
 // universities = graduates.map(function(name) {
-//   return name.university.sort(function(a, b){
-//     if(a.firstname < b.firstname) { return -1; }
-//     if(a.firstname > b.firstname) { return 1; }
-//     return 0;
-//   });
+//   return name.university.sort(dynamicSort("univeristy"));
+// //   return element.university.
 // });
+
 
 console.log(universities);
 
@@ -142,7 +140,12 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+let lowerCase = [];
+
+lowerCase = zooAnimals.map(function(name) {
+  return name.animal_name.toLowerCase()
+});
+
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -150,7 +153,12 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
+let lowerPopulation = [];
+
+lowerPopulation = zooAnimals.filter(function(element) {
+  return element.population < 5
+});
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -158,7 +166,12 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+let populationTotal = 0;
+
+populationTotal = zooAnimals.reduce(function(param1, param2) {
+  return param1 += param2.population;
+}, 0);
+
 console.log(populationTotal);
 
 
